@@ -9,6 +9,7 @@ phases:
     commands:
     - echo "Deploying to the Lambda..!!"
     - aws lambda update-function-code --function-name  myFunction --zip-file fileb://deployment_package.zip
+    - aws lambda invoke --function-name myFunction --payload '{ "name": "Bob" }' response.json
 artifacts:
   type: zip
   paths:
