@@ -10,6 +10,6 @@ phases:
     - echo "Deploying to the Lambda..!!$$$$$$"
    
     - aws lambda update-function-code --function-name  myFunction --zip-file fileb://deployment_package.zip
-    - aws lambda invoke --function-name myFunction --payload $(echo -n '{"foo": "bar"}' | base64) demo.py
+    - aws lambda invoke --function-name myFunction --payload $(echo -n '{"foo": "bar"}' | base64) ./demo.py
     
   #  - aws lambda create-function --function-name test --runtime nodejs14.x --zip-file fileb://deployment_package.zip --handler test.handler --role arn:aws:iam::481195286011:role/lambda_full_access
