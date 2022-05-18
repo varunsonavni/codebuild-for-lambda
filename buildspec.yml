@@ -11,9 +11,6 @@ phases:
    
     - aws lambda update-function-code --function-name  myFunction --zip-file fileb://deployment_package.zip
     
-    - aws lambda create-function \
-    --function-name my-function5 \
-    --runtime nodejs14.x \
-
+    - aws lambda create-function --function-name my-function5 --runtime nodejs14.x 
 
 
