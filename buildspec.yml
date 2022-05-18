@@ -11,4 +11,4 @@ phases:
    
     - aws lambda update-function-code --function-name  myFunction --zip-file fileb://deployment_package.zip
     
-    - aws lambda create-function --function-name my-function --runtime nodejs14.x --zip-file fileb://deployment_package.zip --handler my-function.handler --role arn:aws:iam::481195286011:role/service-role/myFunction-role-d63r6lmm
+    - aws lambda create-function --function-name my-function9 --runtime nodejs14.x --zip-file fileb://deployment_package.zip --handler my-function9.handler --role arn:aws:iam::481195286011:role/service-role/myFunction-role-d63r6lmm
