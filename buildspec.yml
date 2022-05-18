@@ -7,8 +7,9 @@ phases:
     - zip -r deployment_package.zip *
   post_build:
     commands:
-    - echo "Deploying to the Lambda..!!"
+    - echo "Deploying to the Lambda..!!$$$$$$"
    
     - aws lambda update-function-code --function-name  myFunction --zip-file fileb://deployment_package.zip
+    - aws lambda invoke --function-name myFunction
     
   #  - aws lambda create-function --function-name test --runtime nodejs14.x --zip-file fileb://deployment_package.zip --handler test.handler --role arn:aws:iam::481195286011:role/lambda_full_access
